@@ -1,11 +1,8 @@
-
 <div align="center">  
   <h1>AI-Powered Personal Farming Assistant</h1>
 </div>
 
----
-
-AgriNOVA is a farmer-first backend that turns scattered agricultural data — weather, soil, markets, advisories, local documents, and images — into one clear, safe, and actionable answer in the farmer’s own language.  
+This project is a farmer-first backend that turns scattered agricultural data — weather, soil, markets, advisories, local documents, and images — into one clear, safe, and actionable answer in the farmer’s own language.  
 It combines Retrieval-Augmented Generation (RAG) with dedicated tools for crop advisory, fertilizer planning, pest & disease detection, weather forecasting, government advisories, and market prices.
 
 ---
@@ -23,40 +20,37 @@ It combines Retrieval-Augmented Generation (RAG) with dedicated tools for crop a
 
 ### 1. Farmer & Farm Profiling
 
-AgriNOVA builds a dynamic **farmer profile** during the first interaction, capturing key parameters such as location, land size, crop type, soil condition (from user input or API), irrigation method, and personal preferences.  
+This project builds a dynamic **farmer profile** during the first interaction, capturing key parameters such as location, land size, crop type, soil condition (from user input or API), irrigation method, and personal preferences.  
 This profile forms the foundation for **localized and adaptive recommendations**, enabling the system to tailor advice to the farmer’s agro-climatic context and reduce repetitive questioning.  
 
 Each interaction—like sowing logs, fertilizer use, or pest reports—is stored in the **activity history**, allowing the backend to recognize seasonal patterns, crop cycles, and previous outcomes.  
-This continuous learning loop refines future recommendations, making them **progressively personalized** and context-aware. A built-in **feedback improvement system** captures user ratings or corrections, ensuring that AgriNOVA evolves with every farmer interaction to deliver smarter, more reliable, and user-specific guidance over time.
-
+This continuous learning loop refines future recommendations, making them **progressively personalized** and context-aware. A built-in **feedback improvement system** captures user ratings or corrections, ensuring that the system evolves with every farmer interaction to deliver smarter, more reliable, and user-specific guidance over time.
 
 ---
 
 ### 2. Conversational Interface (Multilingual)
 
-AgriNOVA’s conversational layer automatically detects the farmer’s language and supports both **voice and text** inputs.  
+The conversational layer automatically detects the farmer’s language and supports both **voice and text** inputs.  
 Queries are internally translated for reasoning and then delivered back in the farmer’s native language for maximum clarity.  
 A built-in **Text-to-Speech (TTS)** module converts AI-generated responses into natural, human-like audio, allowing farmers with limited literacy to **listen to recommendations** instead of reading them.  
 Multi-intent queries are intelligently segmented and routed to the relevant tools, ensuring each part of the question is addressed accurately.  
 Throughout, the assistant maintains a **human tone** — concise, empathetic, and safety-focused — while providing traceable, cited information.
 
-
 ---
 
 ### 3. Activity Tracking
 
-AgriNOVA maintains a structured **activity tracking module** that records all key farm operations — sowing, irrigation, fertilizer usage, pesticide application, and pest or disease sightings.
+The system maintains a structured **activity tracking module** that records all key farm operations — sowing, irrigation, fertilizer usage, pesticide application, and pest or disease sightings.  
 Each log entry is timestamped, geotagged (when permission is granted), and linked to the farmer’s profile, enabling correlation with weather forecasts, soil data, and crop growth stages.  
 
 The system uses this data to generate **context-aware alerts** (e.g., “Irrigation due tomorrow”) and **predictive insights** (e.g., elevated pest probability post-rainfall).  
 A continuous **feedback learning loop** allows farmers to rate or correct past recommendations; this data feeds into a **correction memory**, ensuring model fine-tuning and **progressive accuracy improvement** in future advisories.
 
-
 ---
 
 ### 4. Personalized Advisory
 
-AgriNOVA’s advisory engine generates contextual, data-backed recommendations through three integrated layers, orchestrated by an **agentic AI system** that autonomously selects, sequences, and validates tool outputs for each farmer query.
+The advisory engine generates contextual, data-backed recommendations through three integrated layers, orchestrated by an **agentic AI system** that autonomously selects, sequences, and validates tool outputs for each farmer query.
 
 - **Evidence:** Retrieved from the **vector-based knowledge base (RAG)** and **AgriKG knowledge graph**, combining factual information from agricultural manuals, extension guides, and domain-linked entities such as crop–disease–nutrient relationships. This ensures every suggestion is grounded in verified, interconnected knowledge.  
 
@@ -67,10 +61,11 @@ AgriNOVA’s advisory engine generates contextual, data-backed recommendations t
 The backend synthesizes all these inputs into **step-by-step, actionable guidance** — prioritizing preventive and non-chemical interventions first, followed by precise input details (dose, timing, and precautions).  
 When system confidence is low or conflicting outputs are detected, the **agentic AI system** revalidates with alternate tools or defaults to **conservative advice**, optionally prompting the user for additional data (e.g., clearer crop image or updated soil parameters) before finalizing the recommendation.
 
+---
 
 ### 5. Reminders & Alerts
 
-AgriNOVA’s **notification and alert system** integrates multiple data sources to keep farmers informed and proactive.  
+The **notification and alert system** integrates multiple data sources to keep farmers informed and proactive.  
 Timely alerts are generated based on the farmer’s **profile, activity history, and weather forecasts**, using real-time feeds from **Disaster Management APIs** for extreme weather, flood, or drought warnings.  
 
 Routine reminders for operations such as irrigation, fertilizer application, and pest inspection are delivered through the **AI Insights module**, which analyzes recent activity logs and forecast data to recommend optimal timing.  
@@ -78,33 +73,28 @@ Routine reminders for operations such as irrigation, fertilizer application, and
 All alerts are **multichannel** — farmers receive messages via **Twilio SMS** for offline accessibility and **in-app notifications** within the web interface for connected users.  
 These reminders are **localized and language-optimized**, ensuring that critical warnings (e.g., disaster alerts) and regular advisories (e.g., input schedules, scheme deadlines, mandi trends) are clear, actionable, and easily understood by every farmer.
 
-
 ---
 
 ### 6. Knowledge Engine
 
-AgriNOVA’s **Knowledge Engine** serves as the cognitive backbone of the advisory ecosystem, combining **retrieval-augmented generation (RAG)** with structured reasoning.  
+The **Knowledge Engine** serves as the cognitive backbone of the advisory ecosystem, combining **retrieval-augmented generation (RAG)** with structured reasoning.  
 It draws contextually relevant information from a **vectorized agricultural knowledge base**—comprising crop guides, pest and disease manuals, fertilizer schedules, and regional cropping calendars—while also linking to **semantic sources like the AgriKG knowledge graph** to establish logical relationships between crops, pests, nutrients, and environmental factors.  
 
 The engine continuously synchronizes with **government advisories**, **scientific updates**, and **market intelligence feeds** to maintain regulatory accuracy and temporal relevance.  
-Through this hybrid of static domain knowledge and dynamic web intelligence, AgriNOVA ensures every response is **evidence-backed, legally compliant, and geographically localized**, enabling precise, actionable, and trustworthy guidance for farmers.
-
+Through this hybrid of static domain knowledge and dynamic web intelligence, the system ensures every response is **evidence-backed, legally compliant, and geographically localized**, enabling precise, actionable, and trustworthy guidance for farmers.
 
 ---
 
 ### 7. Wellbeing & Safety Layer (Sentiment Analysis & Escalation)
 
-AgriNOVA uses **sentiment analysis** on voice and text inputs to detect stress or distress indicators in farmer interactions.  
+The assistant uses **sentiment analysis** on voice and text inputs to detect stress or distress indicators in farmer interactions.  
 A calculated **Red Score** quantifies emotional risk based on language tone, frequency of negative terms, and contextual triggers like crop loss or debt.  
-When the score exceeds a set threshold, the system automatically **switches to empathetic response mode**, pauses hazardous recommendations, and **alerts a designated reporting authority** .  
+When the score exceeds a set threshold, the system automatically **switches to empathetic response mode**, pauses hazardous recommendations, and **alerts a designated reporting authority**.  
 Sensitive data remains anonymized, ensuring farmer safety, privacy, and emotional wellbeing.
-
 
 ---
 
 <img width="1092" height="406" alt="arch01 drawio" src="https://github.com/user-attachments/assets/d1de4539-b4f0-4d5c-a073-9995041141b8" />
-
-
 
 ### System Architecture Overview
 
@@ -116,17 +106,16 @@ Sensitive data remains anonymized, ensuring farmer safety, privacy, and emotiona
 6. **Agent AI (LLM + Tool Executors):** The central orchestrator applying **ReAct (Reasoning + Action + Observation)**—deciding which tools to invoke, merging their outputs, and synthesizing a unified response.  
 7. **Weather API:** Fetches localized real-time and forecast weather data (rainfall, humidity, wind, temperature) to provide time-sensitive AI insights.  
 8. **Soil API:** Retrieves region-specific soil data (NPK levels, pH, moisture) used for crop and fertilizer recommendations.  
-9. **Fertilizer and Crop Recommendation:** Generates agronomic Fertilizer and Crop recommendatios based on soil and climate data provided(or fetched through api).    
+9. **Fertilizer and Crop Recommendation:** Generates agronomic fertilizer and crop recommendations based on soil and climate data provided (or fetched through API).    
 10. **Gemini API + CNN Model:** Performs disease and pest identification through multimodal image analysis and CNN-based classification.  
 11. **Web Search (Tavily/Google):** Retrieves latest online content—schemes, advisories, or research updates—to complement local knowledge.  
 12. **Mandi Price (Model/DSS):** Collects and analyzes market price trends to suggest optimal selling periods and locations.  
 13. **RAG Search + Knowledge Graph:** Combines vector-based retrieval with **AgriKG** and local crop databases to deliver verified, region-specific insights on practices, calendars, and pest management.  
-14. **Red Score & Reporting System:** Uses sentiment analysis to detect distress and generate a wellbeing score; escalates critical cases to local authorities for support while keeping all data anonymized to ensure farmer privacy and safety.
+14. **Red Score & Reporting System:** Uses sentiment analysis to detect distress and generate a wellbeing score; escalates critical cases to local authorities for support while keeping all data anonymized to ensure farmer privacy and safety.  
 15. **Post Processing:** Translates the AI-generated English response back into the farmer’s original language while preserving technical accuracy.  
 16. **User Interface (Web):** Presents the final AI response through a multilingual chat interface with voice, text, and notification support.
 
 ---
-
 
 ## How an Answer Is Produced (End-to-End Logic)
 
@@ -138,8 +127,8 @@ Sensitive data remains anonymized, ensuring farmer safety, privacy, and emotiona
    - Fertilizer/Crop → Advisory Tool (soil + history)  
    - Schemes → Govt Advisories Tool  
    - References → RAG Knowledge Base  
-   - Market → Web & Price Tools
-   - Genral Query → RAG & Web Search Tool
+   - Market → Web & Price Tools  
+   - General Query → RAG & Web Search Tool  
 4. Cross-Check: Align results, remove conflicts, apply weather/legal constraints.  
 5. Personalize & Safeguard: Adapt tone, include PPE and regulation notes.  
 6. Synthesize & Translate: Merge outputs into one coherent plan (today → later), translate back to user language.  
@@ -232,7 +221,6 @@ Sensitive data remains anonymized, ensuring farmer safety, privacy, and emotiona
 - **Red Score Module:** Ensures farmer emotional wellbeing through sentiment detection, safe response adjustment, and optional escalation.  
 - **Data Privacy:** All sensitive or emotional data remains anonymized and securely stored.
 
-
 ---
 
 ## Reliability & Safety Principles
@@ -244,4 +232,4 @@ Sensitive data remains anonymized, ensuring farmer safety, privacy, and emotiona
 
 ---
 
-AgriNOVA — bridging intelligence and empathy for every farmer, everywhere.
+**Empowering every farmer with intelligence, empathy, and precision.**
