@@ -1,20 +1,16 @@
 
-<div align="center">
-   <img src="AGRINOVA__logo.png" alt="AgriNOVA Logo" width="180" height="180" />
-
-  
-  <h1>AgriNOVA: AI-Powered Personal Farming Assistant</h1>
+<div align="center">  
+  <h1>AI-Powered Personal Farming Assistant</h1>
 </div>
 
 ---
-# AgriNOVA Backend – Farmer-First Multilingual Farm Assistant
 
 AgriNOVA is a farmer-first backend that turns scattered agricultural data — weather, soil, markets, advisories, local documents, and images — into one clear, safe, and actionable answer in the farmer’s own language.  
 It combines Retrieval-Augmented Generation (RAG) with dedicated tools for crop advisory, fertilizer planning, pest & disease detection, weather forecasting, government advisories, and market prices.
 
 ---
 
-## What This Backend Does (At a Glance)
+## What This Does (At a Glance)
 
 - Understands any language & images: Auto-detects the user’s language, translates internally, and analyzes crop photos for pests or diseases.  
 - Finds the right facts fast: Pulls verified information from a local agri knowledge base and supplements it with live data (weather, schemes, mandi prices).  
